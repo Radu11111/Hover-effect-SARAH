@@ -1,0 +1,78 @@
+body {
+    background-color: #223;
+}
+
+/* COMPONENT STYLES */
+.effect-sarah {
+    margin: 50px auto;
+
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    /* border: 1px dotted white; */
+    width: 600px;
+    height: 400px;
+    
+    position: relative;
+}
+.effect-sarah .image {
+    transform: translateX(-0.5em);
+    transition: .5s;
+    z-index: -1;
+}
+.effect-sarah .image,
+.effect-sarah.caption,
+.effect-sarah .overlay {
+    position: absolute;
+}
+.effect-sarah .overlay {
+    width:600px;
+    height: 400px;
+    transition: .25s;
+    z-index: 0;
+}
+.effect-sarah .caption {
+    /* border: 1px solid green; */
+    transform: translateY(4em);
+    width: 500px;
+    margin-left: 40px;
+    z-index:1;
+}
+.effect-sarah .caption h2 {
+    font-size: 2em;
+}
+.effect-sarah .caption p {
+    letter-spacing: .15em;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateX(8em);
+}
+.effect-sarah .caption .thin {
+    font-weight: lighter;
+}
+.effect-sarah .caption .border {
+    position: absolute;
+    top: 50px;
+
+    height: 2px;
+    background-color: white;
+    width: 0;
+
+    transition: 0.5s;
+    
+}
+
+/* HOVER STATE */
+.effect-sarah:hover .image {
+    transform: translateX(0);
+}
+.effect-sarah:hover .overlay {
+    background-color: #0d261aaa;
+}
+.effect-sarah:hover p {
+    opacity: 1;
+    transform: translateX(0);
+}
+.effect-sarah:hover .caption .border {
+    width: 100%;
+}
